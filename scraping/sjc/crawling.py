@@ -2,10 +2,8 @@ import json
 import logging
 from pathlib import Path
 from dataclasses import dataclass, asdict
-from datetime import datetime, timezone
-
 import requests
-from bs4 import BeautifulSoup
+from utils.timer import get_scraped_time
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -51,7 +49,7 @@ def save_to_json(entries: list[GoldEntry], path: Path) -> None:
     payload = {
         "source": URL,
         "location": "Hồ Chí Minh",
-        "scraped_at": datetime.now(timezone.utc).isoformat(),
+        "scraped_at": get_scraped_time(),
         "count": len(entries),
         "prices": [asdict(e) for e in entries],
     }

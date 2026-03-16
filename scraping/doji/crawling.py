@@ -2,10 +2,10 @@ import json
 import logging
 from pathlib import Path
 from dataclasses import dataclass, asdict
-from datetime import datetime, timezone
-
 import requests
 from bs4 import BeautifulSoup
+
+from utils.timer import get_scraped_time
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -65,13 +65,11 @@ def parse_gold_table(html: str) -> list[GoldEntry]:
 
 
 def save_to_json(entries: list[GoldEntry], path: Path) -> None:
-    """Write parsed entries to a JSON file with metadata."""
     path.parent.mkdir(parents=True, exist_ok=True)
-
     payload = {
         "source": URL,
         "location": "Hồ Chí Minh",
-        "scraped_at": datetime.now(timezone.utc).isoformat(),
+        "scraped_at": get_scraped_time(),
         "count": len(entries),
         "prices": [asdict(e) for e in entries],
     }
@@ -87,7 +85,7 @@ def get_gold_prices() -> list[GoldEntry]:
     """Main entry point: fetch, parse, and persist gold prices."""
     logger.info("Fetching gold prices from %s", URL)
     retry = 3
-    attemp = 0
+    attempt = 0
     try:
         html = fetch_html(URL)
         entries = parse_gold_table(html)
@@ -100,8 +98,8 @@ def get_gold_prices() -> list[GoldEntry]:
 
     except Exception as e:
         logger.error("Error: %s", e)
-        if attemp < retry:
-            logger.info("Retrying... (%d/%d)", attemp + 1, retry)
+        if attempt < retry:
+            logger.info("Retrying... (%d/%d)", attempt + 1, retry)
             return get_gold_prices()
         else:
             logger.error("Failed after %d attempts.", retry)

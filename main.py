@@ -1,7 +1,6 @@
 from fastapi import APIRouter, HTTPException, Query
 from storage import get_data_by_brand
 from scraping.manager import trigger_scraping
-from schemas import GoldResponse
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
