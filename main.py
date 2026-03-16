@@ -8,7 +8,6 @@ import uvicorn
 
 router = APIRouter(prefix="/api/v1/gold", tags=["gold"])
 app = FastAPI(title="Gold Price API")
-app.include_router(router)
 origins = [
     "http://localhost",
     "http://localhost:3000",
@@ -28,13 +27,14 @@ app.add_middleware(
 )
 
 @router.get("/price", response_model=None)
-def get_gold_price(brand: str = Query(..., description="e.g. doji, pnj, mihong, sjc, btmh, btmc")) -> GoldResponse:
+def get_gold_price(brand: str = Query(..., description="e.g. doji, pnj, mihong, sjc, btmh, btmc")):
     trigger_scraping(brand)
     data = get_data_by_brand(brand)
-    if not data:  # ✅ data is None or empty list → brand not found
+    if not data:
         raise HTTPException(status_code=404, detail=f"Brand '{brand}' not found")
     return data
 
+app.include_router(router)
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
 
