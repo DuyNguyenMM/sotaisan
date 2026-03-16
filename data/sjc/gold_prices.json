@@ -1,68 +1,68 @@
 {
     "source": "https://sjc.com.vn/gia-vang-online",
     "location": "H\u1ed3 Ch\u00ed Minh",
-    "scraped_at": "2026-03-16T21:14:00.476073+07:00",
+    "scraped_at": "2026-03-16T21:52:54.403616+07:00",
     "count": 12,
     "prices": [
         {
             "name": "V\u00e0ng SJC 1L, 10L, 1KG",
-            "buy": 180100000,
-            "sell": 183100000
+            "buy": 18010000,
+            "sell": 18310000
         },
         {
             "name": "V\u00e0ng SJC 5 ch\u1ec9",
-            "buy": 180100000,
-            "sell": 183120000
+            "buy": 18010000,
+            "sell": 18312000
         },
         {
             "name": "V\u00e0ng SJC 0.5 ch\u1ec9, 1 ch\u1ec9, 2 ch\u1ec9",
-            "buy": 180100000,
-            "sell": 183130000
+            "buy": 18010000,
+            "sell": 18313000
         },
         {
             "name": "V\u00e0ng nh\u1eabn SJC 99,99% 1 ch\u1ec9, 2 ch\u1ec9, 5 ch\u1ec9",
-            "buy": 179800000,
-            "sell": 182800000
+            "buy": 17980000,
+            "sell": 18280000
         },
         {
             "name": "V\u00e0ng nh\u1eabn SJC 99,99% 0.5 ch\u1ec9, 0.3 ch\u1ec9",
-            "buy": 179800000,
-            "sell": 182900000
+            "buy": 17980000,
+            "sell": 18290000
         },
         {
             "name": "N\u1eef trang 99,99%",
-            "buy": 177800000,
-            "sell": 181300000
+            "buy": 17780000,
+            "sell": 18130000
         },
         {
             "name": "N\u1eef trang 99%",
-            "buy": 173004950,
-            "sell": 179504950
+            "buy": 17300495,
+            "sell": 17950495
         },
         {
             "name": "N\u1eef trang 75%",
-            "buy": 127238598,
-            "sell": 136138598
+            "buy": 12723859,
+            "sell": 13613859
         },
         {
             "name": "N\u1eef trang 68%",
-            "buy": 114546329,
-            "sell": 123446329
+            "buy": 11454632,
+            "sell": 12344632
         },
         {
             "name": "N\u1eef trang 61%",
-            "buy": 101854060,
-            "sell": 110754060
+            "buy": 10185406,
+            "sell": 11075406
         },
         {
             "name": "N\u1eef trang 58,3%",
-            "buy": 96958470,
-            "sell": 105858470
+            "buy": 9695847,
+            "sell": 10585847
         },
         {
             "name": "N\u1eef trang 41,7%",
-            "buy": 66859660,
-            "sell": 75759660
+            "buy": 6685966,
+            "sell": 7575966
         }
     ]
 }

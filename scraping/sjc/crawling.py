@@ -36,8 +36,8 @@ def parse_gold_table() -> list[GoldEntry]:
         if item['BranchName'] == 'Hồ Chí Minh':
             entries.append(GoldEntry(
                 name=item['TypeName'],
-                buy=int(item['BuyValue']),
-                sell=int(item['SellValue'])
+                buy=int(item['BuyValue']/10),
+                sell=int(item['SellValue']/10)
             ))
     return entries
 
