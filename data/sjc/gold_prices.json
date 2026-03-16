@@ -1,0 +1,68 @@
+{
+    "source": "https://sjc.com.vn/gia-vang-online",
+    "location": "H\u1ed3 Ch\u00ed Minh",
+    "scraped_at": "2026-03-16T21:14:00.476073+07:00",
+    "count": 12,
+    "prices": [
+        {
+            "name": "V\u00e0ng SJC 1L, 10L, 1KG",
+            "buy": 180100000,
+            "sell": 183100000
+        },
+        {
+            "name": "V\u00e0ng SJC 5 ch\u1ec9",
+            "buy": 180100000,
+            "sell": 183120000
+        },
+        {
+            "name": "V\u00e0ng SJC 0.5 ch\u1ec9, 1 ch\u1ec9, 2 ch\u1ec9",
+            "buy": 180100000,
+            "sell": 183130000
+        },
+        {
+            "name": "V\u00e0ng nh\u1eabn SJC 99,99% 1 ch\u1ec9, 2 ch\u1ec9, 5 ch\u1ec9",
+            "buy": 179800000,
+            "sell": 182800000
+        },
+        {
+            "name": "V\u00e0ng nh\u1eabn SJC 99,99% 0.5 ch\u1ec9, 0.3 ch\u1ec9",
+            "buy": 179800000,
+            "sell": 182900000
+        },
+        {
+            "name": "N\u1eef trang 99,99%",
+            "buy": 177800000,
+            "sell": 181300000
+        },
+        {
+            "name": "N\u1eef trang 99%",
+            "buy": 173004950,
+            "sell": 179504950
+        },
+        {
+            "name": "N\u1eef trang 75%",
+            "buy": 127238598,
+            "sell": 136138598
+        },
+        {
+            "name": "N\u1eef trang 68%",
+            "buy": 114546329,
+            "sell": 123446329
+        },
+        {
+            "name": "N\u1eef trang 61%",
+            "buy": 101854060,
+            "sell": 110754060
+        },
+        {
+            "name": "N\u1eef trang 58,3%",
+            "buy": 96958470,
+            "sell": 105858470
+        },
+        {
+            "name": "N\u1eef trang 41,7%",
+            "buy": 66859660,
+            "sell": 75759660
+        }
+    ]
+}

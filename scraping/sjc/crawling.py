@@ -8,7 +8,7 @@ from utils.timer import get_scraped_time
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-OUTPUT_FILE = Path("data/gold_prices.json")
+OUTPUT_FILE = Path("data/sjc/gold_prices.json")
 URL = "https://sjc.com.vn/gia-vang-online"
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; GoldPriceScraper/1.0)"}
 TIMEOUT = 10
@@ -17,8 +17,8 @@ TIMEOUT = 10
 @dataclass
 class GoldEntry:
     name: str
-    buy: str
-    sell: str
+    buy: int
+    sell: int
 
 
 def fetch_html(url: str) -> str:
@@ -36,8 +36,8 @@ def parse_gold_table() -> list[GoldEntry]:
         if item['BranchName'] == 'Hồ Chí Minh':
             entries.append(GoldEntry(
                 name=item['TypeName'],
-                buy=item['BuyValue'],
-                sell=item['SellValue']
+                buy=int(item['BuyValue']),
+                sell=int(item['SellValue'])
             ))
     return entries
 
@@ -58,16 +58,16 @@ def save_to_json(entries: list[GoldEntry], path: Path) -> None:
         json.dumps(payload, ensure_ascii=False, indent=4),
         encoding="utf-8",
     )
+    with open(OUTPUT_FILE, "w") as json_file:
+        json.dump(payload, json_file, indent=4)
     logger.info("Saved %d entries to %s", len(entries), path)
 
 
 def get_gold_prices() -> list[GoldEntry]:
     """Main entry point: fetch, parse, and persist gold prices."""
     logger.info("Fetching gold prices from %s", URL)
-
     try:
         entries = parse_gold_table()
-
         if not entries:
             raise ValueError("Parsed table returned no entries — page structure may have changed.")
 

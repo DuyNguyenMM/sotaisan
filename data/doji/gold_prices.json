@@ -1,48 +1,48 @@
 {
     "source": "https://giavang.doji.vn/",
     "location": "Hồ Chí Minh",
-    "scraped_at": "2026-03-15T07:30:35.456534+00:00",
+    "scraped_at": "2026-03-16T21:13:01.502739+07:00",
     "count": 8,
     "prices": [
         {
             "name": "SJC -Bán Lẻ(nghìn/chỉ)",
-            "buy": "17,960",
-            "sell": "18,260"
+            "buy": 18010000,
+            "sell": 18310000
         },
         {
             "name": "Kim TT/AVPL(nghìn/chỉ)",
-            "buy": "17,965",
-            "sell": "18,270"
+            "buy": 18015000,
+            "sell": 18320000
         },
         {
             "name": "NHẪN TRÒN 9999 HƯNG THỊNH VƯỢNG(nghìn/chỉ)",
-            "buy": "17,960",
-            "sell": "18,260"
+            "buy": 18010000,
+            "sell": 18310000
         },
         {
             "name": "Nguyên Liệu 99.99",
-            "buy": "17,080",
-            "sell": "17,280"
+            "buy": 17150000,
+            "sell": 17350000
         },
         {
             "name": "Nguyên Liệu 99.9",
-            "buy": "17,030",
-            "sell": "17,230"
+            "buy": 17100000,
+            "sell": 17300000
         },
         {
             "name": "NỮ TRANG 9999 - BÁN LẺ(nghìn/chỉ)",
-            "buy": "17,800",
-            "sell": "18,200"
+            "buy": 17850000,
+            "sell": 18250000
         },
         {
             "name": "NỮ TRANG 999 - BÁN LẺ",
-            "buy": "17,750",
-            "sell": "18,150"
+            "buy": 17800000,
+            "sell": 18200000
         },
         {
             "name": "Nữ trang 99 - Bán Lẻ",
-            "buy": "17,680",
-            "sell": "18,130"
+            "buy": 17730000,
+            "sell": 18180000
         }
     ]
 }
